@@ -1,26 +1,26 @@
-name: Continuous deployment
-on: [push]
+# name: Continuous deployment
+# on: [push]
 
 
-jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: nightly
-          target: wasm32-unknown-unknown
-          override: true
+# jobs:
+#   release:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions-rs/toolchain@v1
+#         with:
+#           toolchain: nightly
+#           target: wasm32-unknown-unknown
+#           override: true
 
-      - uses: jetli/trunk-action@v0.1.0
-      - uses: jetli/wasm-bindgen-action@v0.1.0
+#       - uses: jetli/trunk-action@v0.1.0
+#       - uses: jetli/wasm-bindgen-action@v0.1.0
 
-      - uses: actions/checkout@v2
+#       - uses: actions/checkout@v2
 
-      - run: trunk build --release --public-url https://r1tr1t.github.io/juke/
+#       - run: trunk build --release --public-url https://r1tr1t.github.io/juke/
 
-      - uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: $
-          publish_dir: ./dist
+#       - uses: peaceiris/actions-gh-pages@v3
+#         if: github.ref == 'refs/heads/main'
+#         with:
+#           github_token: $
+#           publish_dir: ./dist
