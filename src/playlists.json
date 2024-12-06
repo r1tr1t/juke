@@ -1,0 +1,559 @@
+[
+    {
+        "title": "Classical Era Bangers",
+        "author": "John",
+        "description": "Music to relax to",
+        "songs": [
+            {
+                "title": "Air on the G String",
+                "author": "Johann Sebastian Bach",
+                "album": "Orchestral Suites",
+                "release": "1723"
+            },
+            {
+                "title": "Eine Kleine Nachtmusik",
+                "author": "Wolfgang Amadeus Mozart",
+                "album": "Symphonies",
+                "release": "1787"
+            },
+            {
+                "title": "Symphony No. 5",
+                "author": "Ludwig van Beethoven",
+                "album": "Symphonies",
+                "release": "1808"
+            },
+            {
+                "title": "Nocturne in E-flat major",
+                "author": "Frédéric Chopin",
+                "album": "Piano Music",
+                "release": "1830"
+            },
+            {
+                "title": "Swan Lake",
+                "author": "Pyotr Ilyich Tchaikovsky",
+                "album": "Ballets",
+                "release": "1877"
+            },
+            {
+                "title": "The Four Seasons",
+                "author": "Antonio Vivaldi",
+                "album": "Violin Concertos",
+                "release": "1725"
+            },
+            {
+                "title": "Clair de Lune",
+                "author": "Claude Debussy",
+                "album": "Piano Music",
+                "release": "1890"
+            },
+            {
+                "title": "Requiem Mass in D minor",
+                "author": "Wolfgang Amadeus Mozart",
+                "album": "Choral Music",
+                "release": "1791"
+            },
+            {
+                "title": "Hungarian Dance No. 5",
+                "author": "Johannes Brahms",
+                "album": "Dance Music",
+                "release": "1869"
+            },
+            {
+                "title": "Piano Concerto No. 2",
+                "author": "Sergei Rachmaninoff",
+                "album": "Piano Concertos",
+                "release": "1901"
+            },
+            {
+                "title": "Water Music",
+                "author": "George Frideric Handel",
+                "album": "Orchestral Suites",
+                "release": "1717"
+            },
+            {
+                "title": "A Midsummer Night's Dream",
+                "author": "Felix Mendelssohn",
+                "album": "Incidental Music",
+                "release": "1842"
+            },
+            {
+                "title": "Unfinished Symphony",
+                "author": "Franz Schubert",
+                "album": "Symphonies",
+                "release": "1822"
+            },
+            {
+                "title": "1812 Overture",
+                "author": "Pyotr Ilyich Tchaikovsky",
+                "album": "Orchestral Music",
+                "release": "1880"
+            },
+            {
+                "title": "Toccata and Fugue in D minor",
+                "author": "Johann Sebastian Bach",
+                "album": "Organ Music",
+                "release": "1703"
+            },
+            {
+                "title": "Don Giovanni",
+                "author": "Wolfgang Amadeus Mozart",
+                "album": "Operas",
+                "release": "1787"
+            },
+            {
+                "title": "Moonlight Sonata",
+                "author": "Ludwig van Beethoven",
+                "album": "Piano Sonatas",
+                "release": "1801"
+            },
+            {
+                "title": "Piano Concerto No. 2",
+                "author": "Frédéric Chopin",
+                "album": "Piano Concertos",
+                "release": "1829"
+            },
+            {
+                "title": "La Mer",
+                "author": "Claude Debussy",
+                "album": "Orchestral Music",
+                "release": "1905"
+            },
+            {
+                "title": "Bolero",
+                "author": "Maurice Ravel",
+                "album": "Orchestral Music",
+                "release": "1928"
+            },
+            {
+                "title": "The Rite of Spring",
+                "author": "Igor Stravinsky",
+                "album": "Ballets",
+                "release": "1913"
+            },
+            {
+                "title": "Concerto for Lute and Orchestra",
+                "author": "Antonio Vivaldi",
+                "album": "Violin Concertos",
+                "release": "1725"
+            },
+            {
+                "title": "Brandenburg Concerto No. 3",
+                "author": "Johann Sebastian Bach",
+                "album": "Orchestral Suites",
+                "release": "1721"
+            },
+            {
+                "title": "Cosi fan tutte",
+                "author": "Wolfgang Amadeus Mozart",
+                "album": "Operas",
+                "release": "1790"
+            },
+            {
+                "title": "Symphony No. 6",
+                "author": "Ludwig van Beethoven",
+                "album": "Symphonies",
+                "release": "1808"
+            },
+            {
+                "title": "Fantaisie-Impromptu",
+                "author": "Frédéric Chopin",
+                "album": "Piano Music",
+                "release": "1834"
+            },
+            {
+                "title": "Nutcracker Suite",
+                "author": "Pyotr Ilyich Tchaikovsky",
+                "album": "Ballets",
+                "release": "1892"
+            },
+            {
+                "title": "Symphony No. 3",
+                "author": "Felix Mendelssohn",
+                "album": "Symphonies",
+                "release": "1842"
+            },
+            {
+                "title": "Impromptus",
+                "author": "Franz Schubert",
+                "album": "Piano Music",
+                "release": "1827"
+            },
+            {
+                "title": "Symphony No. 2",
+                "author": "Sergei Rachmaninoff",
+                "album": "Symphonies",
+                "release": "1908"
+            },
+            {
+                "title": "Messiah",
+                "author": "George Frideric Handel",
+                "album": "Oratorios",
+                "release": "1742"
+            },
+            {
+                "title": "The Magic Flute",
+                "author": "Wolfgang Amadeus Mozart",
+                "album": "Operas",
+                "release": "1791"
+            },
+            {
+                "title": "Piano Sonata No. 8",
+                "author": "Ludwig van Beethoven",
+                "album": "Piano Sonatas",
+                "release": "1813"
+            },
+            {
+                "title": "Waltz in D-flat major",
+                "author": "Frédéric Chopin",
+                "album": "Piano Music",
+                "release": "1830"
+            },
+            {
+                "title": "Prelude to the Afternoon of a Faun",
+                "author": "Claude Debussy",
+                "album": "Piano Music",
+                "release": "1894"
+            },
+            {
+                "title": "Daphnis et Chloé",
+                "author": "Maurice Ravel",
+                "album": "Ballets",
+                "release": "1909"
+            },
+            {
+                "title": "The Firebird",
+                "author": "Igor Stravinsky",
+                "album": "Ballets",
+                "release": "1910"
+            },
+            {
+                "title": "Gloria",
+                "author": "Antonio Vivaldi",
+                "album": "Choral Music",
+                "release": "1715"
+            },
+            {
+                "title": "Mass in B minor",
+                "author": "Johann Sebastian Bach",
+                "album": "Choral Music",
+                "release": "1749"
+            },
+            {
+                "title": "The Marriage of Figaro",
+                "author": "Wolfgang Amadeus Mozart",
+                "album": "Operas",
+                "release": "1786"
+            },
+            {
+                "title": "Symphony No. 9",
+                "author": "Ludwig van Beethoven",
+                "album": "Symphonies",
+                "release": "1824"
+            },
+            {
+                "title": "Piano Sonata No. 2",
+                "author": "Frédéric Chopin",
+                "album": "Piano Sonatas",
+                "release": "1839"
+            },
+            {
+                "title": "Romeo and Juliet",
+                "author": "Pyotr Ilyich Tchaikovsky",
+                "album": "Ballets",
+                "release": "1870"
+            },
+            {
+                "title": "Hebrides Overture",
+                "author": "Felix Mendelssohn",
+                "album": "Orchestral Music",
+                "release": "1830"
+            },
+            {
+                "title": "Symphony No. 8",
+                "author": "Franz Schubert",
+                "album": "Symphonies",
+                "release": "1822"
+            }
+        ],
+        "likes": 0
+    },
+    {
+        "title": "Classic Rock",
+        "author": "Sarah",
+        "description": "Songs that I jam out to",
+        "songs": [
+            {
+                "title": "Stairway to Heaven",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin IV",
+                "release": "1971-11-08"
+            },
+            {
+                "title": "Hotel California",
+                "author": "Eagles",
+                "album": "Hotel California",
+                "release": "1976-12-08"
+            },
+            {
+                "title": "Sweet Emotion",
+                "author": "Aerosmith",
+                "album": "Toys in the Attic",
+                "release": "1975-06-08"
+            },
+            {
+                "title": "Layla",
+                "author": "Derek and the Dominos",
+                "album": "Layla and Other Assorted Love Songs",
+                "release": "1970-12-09"
+            },
+            {
+                "title": "Whole Lotta Love",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin II",
+                "release": "1969-10-22"
+            },
+            {
+                "title": "Satisfaction",
+                "author": "The Rolling Stones",
+                "album": "Out of Our Heads",
+                "release": "1965-07-30"
+            },
+            {
+                "title": "Born to Run",
+                "author": "Bruce Springsteen",
+                "album": "Born to Run",
+                "release": "1975-08-25"
+            },
+            {
+                "title": "Imagine",
+                "author": "John Lennon",
+                "album": "Imagine",
+                "release": "1971-09-09"
+            },
+            {
+                "title": "Bohemian Rhapsody",
+                "author": "Queen",
+                "album": "A Night at the Opera",
+                "release": "1975-11-21"
+            },
+            {
+                "title": "Black Dog",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin IV",
+                "release": "1971-11-08"
+            },
+            {
+                "title": "Barracuda",
+                "author": "Heart",
+                "album": "Little Queen",
+                "release": "1977-06-14"
+            },
+            {
+                "title": "Carry On Wayward Son",
+                "author": "Kansas",
+                "album": "Leftoverture",
+                "release": "1976-10-26"
+            },
+            {
+                "title": "All the Young Dudes",
+                "author": "Mott the Hoople",
+                "album": "All the Young Dudes",
+                "release": "1972-09-21"
+            },
+            {
+                "title": "We're an American Band",
+                "author": "Grand Funk Railroad",
+                "album": "We're an American Band",
+                "release": "1973-09-13"
+            },
+            {
+                "title": "Barracuda",
+                "author": "Heart",
+                "album": "Little Queen",
+                "release": "1977-06-14"
+            },
+            {
+                "title": "Layla",
+                "author": "Derek and the Dominos",
+                "album": "Layla and Other Assorted Love Songs",
+                "release": "1970-12-09"
+            },
+            {
+                "title": "Sweet Emotion",
+                "author": "Aerosmith",
+                "album": "Toys in the Attic",
+                "release": "1975-06-08"
+            },
+            {
+                "title": "Hotel California",
+                "author": "Eagles",
+                "album": "Hotel California",
+                "release": "1976-12-08"
+            },
+            {
+                "title": "Stairway to Heaven",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin IV",
+                "release": "1971-11-08"
+            },
+            {
+                "title": "Imagine",
+                "author": "John Lennon",
+                "album": "Imagine",
+                "release": "1971-09-09"
+            },
+            {
+                "title": "Born to Run",
+                "author": "Bruce Springsteen",
+                "album": "Born to Run",
+                "release": "1975-08-25"
+            },
+            {
+                "title": "Satisfaction",
+                "author": "The Rolling Stones",
+                "album": "Out of Our Heads",
+                "release": "1965-07-30"
+            },
+            {
+                "title": "Whole Lotta Love",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin II",
+                "release": "1969-10-22"
+            },
+            {
+                "title": "Bohemian Rhapsody",
+                "author": "Queen",
+                "album": "A Night at the Opera",
+                "release": "1975-11-21"
+            },
+            {
+                "title": "Black Dog",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin IV",
+                "release": "1971-11-08"
+            },
+            {
+                "title": "Carry On Wayward Son",
+                "author": "Kansas",
+                "album": "Leftoverture",
+                "release": "1976-10-26"
+            },
+            {
+                "title": "All the Young Dudes",
+                "author": "Mott the Hoople",
+                "album": "All the Young Dudes",
+                "release": "1972-09-21"
+            },
+            {
+                "title": "We're an American Band",
+                "author": "Grand Funk Railroad",
+                "album": "We're an American Band",
+                "release": "1973-09-13"
+            },
+            {
+                "title": "Barracuda",
+                "author": "Heart",
+                "album": "Little Queen",
+                "release": "1977-06-14"
+            },
+            {
+                "title": "Layla",
+                "author": "Derek and the Dominos",
+                "album": "Layla and Other Assorted Love Songs",
+                "release": "1970-12-09"
+            },
+            {
+                "title": "Sweet Emotion",
+                "author": "Aerosmith",
+                "album": "Toys in the Attic",
+                "release": "1975-06-08"
+            },
+            {
+                "title": "Hotel California",
+                "author": "Eagles",
+                "album": "Hotel California",
+                "release": "1976-12-08"
+            },
+            {
+                "title": "Stairway to Heaven",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin IV",
+                "release": "1971-11-08"
+            },
+            {
+                "title": "Imagine",
+                "author": "John Lennon",
+                "album": "Imagine",
+                "release": "1971-09-09"
+            },
+            {
+                "title": "Born to Run",
+                "author": "Bruce Springsteen",
+                "album": "Born to Run",
+                "release": "1975-08-25"
+            },
+            {
+                "title": "Satisfaction",
+                "author": "The Rolling Stones",
+                "album": "Out of Our Heads",
+                "release": "1965-07-30"
+            },
+            {
+                "title": "Whole Lotta Love",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin II",
+                "release": "1969-10-22"
+            },
+            {
+                "title": "Bohemian Rhapsody",
+                "author": "Queen",
+                "album": "A Night at the Opera",
+                "release": "1975-11-21"
+            },
+            {
+                "title": "Black Dog",
+                "author": "Led Zeppelin",
+                "album": "Led Zeppelin IV",
+                "release": "1971-11-08"
+            },
+            {
+                "title": "Carry On Wayward Son",
+                "author": "Kansas",
+                "album": "Leftoverture",
+                "release": "1976-10-26"
+            },
+            {
+                "title": "All the Young Dudes",
+                "author": "Mott the Hoople",
+                "album": "All the Young Dudes",
+                "release": "1972-09-21"
+            },
+            {
+                "title": "We're an American Band",
+                "author": "Grand Funk Railroad",
+                "album": "We're an American Band",
+                "release": "1973-09-13"
+            },
+            {
+                "title": "Barracuda",
+                "author": "Heart",
+                "album": "Little Queen",
+                "release": "1977-06-14"
+            },
+            {
+                "title": "Layla",
+                "author": "Derek and the Dominos",
+                "album": "Layla and Other Assorted Love Songs",
+                "release": "1970-12-09"
+            },
+            {
+                "title": "Sweet Emotion",
+                "author": "Aerosmith",
+                "album": "Toys in the Attic",
+                "release": "1975-06-08"
+            }
+        ],
+        "likes": 1
+    }
+
+]

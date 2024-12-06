@@ -1,0 +1,212 @@
+:root {
+    --background: #020202;
+    --background-light: #2a2e2b;
+    --accent: #16DB65;
+    --accent-dark: #058C42;
+    --text: #ededed;
+}
+
+.panel {
+    padding: 1vh;
+    border-radius: 2vh;
+    border: 1vh solid rgba(0, 0, 0, 0);
+    margin: 0vh 0.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    overflow-y: auto;
+}
+
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+hr {
+    background-color: var(--accent-dark);
+    height: 3px;
+    border: 0;
+}
+
+#top {
+    height: 6vh;
+    left: 0px;
+    right: 0px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+#top h1 {
+    font-size: 3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#top h1 a:hover {
+    text-decoration: underline;
+}
+
+#top h1 a {
+    text-decoration: none;
+    color: var(--accent)
+}
+
+main {
+    flex: 1;
+    display: flex;
+    min-height: 90vh;
+    width: 100%
+}
+
+#left {
+    width: 20%;
+    background-color: var(--background-light);
+}
+
+#content {
+    width: 60%;
+    background-color: var(--background);
+}
+
+#content #title {
+    font-size: 2.5em;
+    margin: 0.3em 0;
+}
+
+#content #description {
+    margin-top: 0.5em;
+}
+
+.big-p {
+    font-size: 1.25em;
+    /* line-height: 1.25em; */
+}
+
+#right {
+    width: 20%;
+    background-color: var(--background-light);
+}
+
+.logo {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: var(--background);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('/images/logo.png');
+    background-size: 135%;
+    background-position: center;
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+}
+
+.logo:hover {
+    transform: scale(1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo:active {
+    transform: scale(0.95);
+}
+
+.playlist-info-wrapper {
+    position: relative;
+}
+
+.like {
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: var(--background);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: 120%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.playlist {
+    padding-inline-start: 0px;
+    border-radius: 1vh;
+    margin: 1vh 0;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 1vh;
+    background-color: var(--background);
+}
+
+.playlist #title {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.playlist #title:hover {
+    text-decoration: underline;
+}
+
+#library-content {
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+
+#playlist-songs {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.song {
+    background-color: var(--background-light);
+    border-radius: 1vh;
+    counter-increment: item;
+    margin-bottom: 1vh;
+    display: grid;
+    grid-template-columns: 2vw 1fr 1fr 6vw;
+    padding: 1vh
+}
+
+.song #song-title {
+    font-weight: bold;
+}
+
+.song #release {
+    text-align: right;
+}
+
+.feed-event {
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    padding: 1vh;
+    background-color: var(--background);
+}
+
+.feed-event .actor, .target {
+    font-weight: bold;
+}
+
+.feed-event .comment {
+    font-style: italic;
+    margin-top: 0.5em;
+}
