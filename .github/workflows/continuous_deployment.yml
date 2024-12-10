@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build static files
-        run: trunk build --release --public-url https://r1tr1t.github.io/juke/
+        run: trunk build --release
 
       - name: Upload static files as an artifact
         uses: actions/upload-pages-artifact@v3

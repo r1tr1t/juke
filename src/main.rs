@@ -44,6 +44,10 @@ fn App() -> impl IntoView {
         FeedTarget::Album("Sample Feed Album".to_owned()),
     ));
     provide_context(signal(feed));
+    let base = document()
+        .base_uri()
+        .expect("Expected baseURI")
+        .expect("Expected baseURI pt2");
     view! {
         <Router>
             <header id="top">
@@ -56,8 +60,8 @@ fn App() -> impl IntoView {
                 <section id="content" class="panel">
                     <Routes fallback=|| "Not found.">
                         // router paths
-                        <Route path=path!("/") view=Home/>
-                        <Route path=path!("/playlists/:id") view=Playlist/>
+                        <Route path=path!("/") view=Home />
+                        <Route path=path!("/playlists/:id") view=Playlist />
                     </Routes>
                 </section>
                 <section id="right" class="panel">
@@ -74,16 +78,32 @@ fn Home() -> impl IntoView {
     view! {
         <h2 id="title">Welcome to jukeboxd!</h2>
         <hr />
-        <p class="big-p">"This project represents a very barebones wireframe of an idea that I had almost a year ago and have always wanted to create. For a long time, I've felt like music streaming services (Spotify in particular) were failing to capitalize on the potential to implement some really cool social elements into their client. Both Spotify and Apple Music have a feature that allows you to find other users, follow them and save their playlists, but don't go much further than that. I wanted to create an application that expands on that capability by:"</p>
+        <p class="big-p">
+            "This project represents a very barebones wireframe of an idea that I had almost a year ago and have always wanted to create. For a long time, I've felt like music streaming services (Spotify in particular) were failing to capitalize on the potential to implement some really cool social elements into their client. Both Spotify and Apple Music have a feature that allows you to find other users, follow them and save their playlists, but don't go much further than that. I wanted to create an application that expands on that capability by:"
+        </p>
         <ul class="big-p">
-            <li>"Creating a toggle that allows other users to publicly like or comment on both users playlists and artist albums and collections"</li>
-            <li>"Giving users a feed to see activity from friends (new playlists, likes on playlists, comments on playlists, albums or collections, etc.)"</li>
-            <li>"A direct messaging service built in to allow for easier sharing of music and podcasts"</li>
-            <li>"The ability to collaborate on playlists with and seamlessly share music and/or podcasts with users on other platforms"</li>
+            <li>
+                "Creating a toggle that allows other users to publicly like or comment on both users playlists and artist albums and collections"
+            </li>
+            <li>
+                "Giving users a feed to see activity from friends (new playlists, likes on playlists, comments on playlists, albums or collections, etc.)"
+            </li>
+            <li>
+                "A direct messaging service built in to allow for easier sharing of music and podcasts"
+            </li>
+            <li>
+                "The ability to collaborate on playlists with and seamlessly share music and/or podcasts with users on other platforms"
+            </li>
         </ul>
-        <p class="big-p">"Additionally, I wanted to build the entire app using as much Rust as possible. Rust is by far my favorite language, and I honestly believe that it will eventually become the future of programming, primarily due to the way that the compiler forces you to write better code from start to finish, making many lazy programming habits impossible. As Rust can be compiled to WASM, this means that even application that run in the browser (including Electron apps and all variants), can be written almost entirely in Rust, resulting in a safer, faster application than one written in JavaScript. After browsing through and trying a few different Frontend Rust frameworks, I settled on Leptos due to it's mind-boggling speed, reactive signal system and the fact that it uses proc macros instead of requiring ridiculous amounts of boilerplate, like many other Rust frameworks do."</p>
-        <p class="big-p">"If that sounds like a daunting task, you'd be absolutely correct. In fact, that's the main reason that I've been putting off working on this idea for so long. My programming background is primarily backend and data analytics, so the learning curve for Leptos was incredibly steep for me. As a result, this project is merely a wireframe of what the final product might eventually look like, as I haven't even gotten around to writing most of the business logic yet. In the end, it should be able to run a fully featured Spotify or Apple Music natively on any platform that comes with a web browser."</p>
-        <p class="big-p">"For now, poke around with the playlists on the left side, and watch in awe as the feed on the right updates in real time as there are absolutely zero API requests being made :D. This application is running in Client-Side Rendering mode, meaning all DOM manipulations are being controlled by WASM service workers running in your browser!"</p>
+        <p class="big-p">
+            "Additionally, I wanted to build the entire app using as much Rust as possible. Rust is by far my favorite language, and I honestly believe that it will eventually become the future of programming, primarily due to the way that the compiler forces you to write better code from start to finish, making many lazy programming habits impossible. As Rust can be compiled to WASM, this means that even application that run in the browser (including Electron apps and all variants), can be written almost entirely in Rust, resulting in a safer, faster application than one written in JavaScript. After browsing through and trying a few different Frontend Rust frameworks, I settled on Leptos due to it's mind-boggling speed, reactive signal system and the fact that it uses proc macros instead of requiring ridiculous amounts of boilerplate, like many other Rust frameworks do."
+        </p>
+        <p class="big-p">
+            "If that sounds like a daunting task, you'd be absolutely correct. In fact, that's the main reason that I've been putting off working on this idea for so long. My programming background is primarily backend and data analytics, so the learning curve for Leptos was incredibly steep for me. As a result, this project is merely a wireframe of what the final product might eventually look like, as I haven't even gotten around to writing most of the business logic yet. In the end, it should be able to run a fully featured Spotify or Apple Music natively on any platform that comes with a web browser."
+        </p>
+        <p class="big-p">
+            "For now, poke around with the playlists on the left side, and watch in awe as the feed on the right updates in real time as there are absolutely zero API requests being made :D. This application is running in Client-Side Rendering mode, meaning all DOM manipulations are being controlled by WASM service workers running in your browser!"
+        </p>
     }
 }
 
@@ -104,7 +124,7 @@ fn Playlist() -> impl IntoView {
             .read()
             .as_ref()
             .ok()
-            .and_then(|params| Some(params.id))
+            .map(|params| params.id)
             .unwrap_or(usize::MAX)
     };
     // get playlists from context
@@ -147,20 +167,29 @@ fn Playlist() -> impl IntoView {
                 <h2 id="title">{current.title}</h2>
                 <div id="author">Playlist by {current.author}</div>
                 <div id="description">{current.description}</div>
-                <button class="like" on:click=toggle_like style:background-image=format!("url('/images/{}.svg')", style())></button>
+                <button
+                    class="like"
+                    on:click=toggle_like
+                    style:background-image=format!("url('/images/{}.svg')", style())
+                ></button>
             </div>
             <hr />
             <ol id="playlist-songs">
-                {current.songs.into_iter().enumerate().map(|(index, song)| {
-                    view! {
-                        <li class="song">
-                            <div id="enumerate">{index + 1}</div>
-                            <div id="song-title">{song.title}</div>
-                            <div id="author">{song.author}</div>
-                            <div id="release">{song.release}</div>
-                        </li>
-                    }
-                }).collect_view()}
+                {current
+                    .songs
+                    .into_iter()
+                    .enumerate()
+                    .map(|(index, song)| {
+                        view! {
+                            <li class="song">
+                                <div id="enumerate">{index + 1}</div>
+                                <div id="song-title">{song.title}</div>
+                                <div id="author">{song.author}</div>
+                                <div id="release">{song.release}</div>
+                            </li>
+                        }
+                    })
+                    .collect_view()}
             </ol>
         }
     };
@@ -172,7 +201,9 @@ fn Playlist() -> impl IntoView {
 fn Top() -> impl IntoView {
     view! {
         <a href="/" class="logo"></a>
-        <h1 id="title"><a href="/">jukeboxd</a></h1>
+        <h1 id="title">
+            <a href="/">jukeboxd</a>
+        </h1>
     }
 }
 
@@ -200,7 +231,9 @@ fn Library() -> impl IntoView {
         let playlist = playlist();
         view! {
             <li class="playlist">
-                <a href=format!("/playlists/{}", index) id="title">{playlist.title}</a>
+                <a href=format!("/playlists/{}", index) id="title">
+                    {playlist.title}
+                </a>
                 <div id="author">Author: {playlist.author}</div>
                 <div id="length">Tracks: {playlist.songs.len()}</div>
             </li>
@@ -224,29 +257,43 @@ fn Right() -> impl IntoView {
         <h2>Feed</h2>
         <hr />
         {move || {
-            feed().into_iter().map(|f| {
-                view!{
-                    <div class="feed-event">
-                        {match f.action {
-                            FeedAction::Like => view!{
-                                <span class="actor">{f.actor}</span>
-                                <span class="action">" liked "</span>
-                                <span class="target">{feed_target(f.target)}</span>
-                            }.into_any(),
-                            FeedAction::Comment(c) => view!{
-                                <span class="actor">{f.actor}</span>
-                                <span class="action">" commented on "</span>
-                                <span class="target">{format!("{}:", feed_target(f.target))}</span>
-                                <div class="comment">{c}</div>
-                            }.into_any(),
-                            FeedAction::FriendRequest => view!{
-                                <span class="actor">{f.actor}</span>
-                                <span class="action">" sent you a friend request!"</span>
-                            }.into_any()
-                        }}
-                    </div>
-                }
-            }).collect_view()
+            feed()
+                .into_iter()
+                .map(|f| {
+                    view! {
+                        <div class="feed-event">
+                            {match f.action {
+                                FeedAction::Like => {
+                                    view! {
+                                        <span class="actor">{f.actor}</span>
+                                        <span class="action">" liked "</span>
+                                        <span class="target">{feed_target(f.target)}</span>
+                                    }
+                                        .into_any()
+                                }
+                                FeedAction::Comment(c) => {
+                                    view! {
+                                        <span class="actor">{f.actor}</span>
+                                        <span class="action">" commented on "</span>
+                                        <span class="target">
+                                            {format!("{}:", feed_target(f.target))}
+                                        </span>
+                                        <div class="comment">{c}</div>
+                                    }
+                                        .into_any()
+                                }
+                                FeedAction::FriendRequest => {
+                                    view! {
+                                        <span class="actor">{f.actor}</span>
+                                        <span class="action">" sent you a friend request!"</span>
+                                    }
+                                        .into_any()
+                                }
+                            }}
+                        </div>
+                    }
+                })
+                .collect_view()
         }}
     }
 }
