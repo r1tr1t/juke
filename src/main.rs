@@ -60,8 +60,8 @@ fn App() -> impl IntoView {
                 <section id="content" class="panel">
                     <Routes fallback=|| "Not found.">
                         // router paths
-                        <Route path=path!("juke/") view=Home />
-                        <Route path=path!("juke/playlists/:id") view=Playlist />
+                        <Route path=path!("/") view=Home />
+                        <Route path=path!("/playlists/:id") view=Playlist />
                     </Routes>
                 </section>
                 <section id="right" class="panel">
